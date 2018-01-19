@@ -4,6 +4,7 @@ $(function () {
   QUnit.module('button plugin')
 
   QUnit.test('should be defined on jquery object', function (assert) {
+    //检查button是否在jquery对象上
     assert.expect(1)
     assert.ok($(document.body).button, 'button method is defined')
   })
@@ -20,11 +21,13 @@ $(function () {
   })
 
   QUnit.test('should provide no conflict', function (assert) {
+    //在test之前已经执行了noConflict，$.fn.button已经被还原会原来的值了，因为这里并没有别的库，因此$.fn.button原来的值是undefined
     assert.expect(1)
     assert.strictEqual(typeof $.fn.button, 'undefined', 'button was set back to undefined (org value)')
   })
 
   QUnit.test('should return jquery collection containing the element', function (assert) {
+    //确保button方法返回的是jquery对象，并且包含原来的元素，其实就是原对象
     assert.expect(2)
     var $el = $('<div/>')
     var $button = $el.bootstrapButton()
@@ -33,6 +36,7 @@ $(function () {
   })
 
   QUnit.test('should toggle active', function (assert) {
+    //toggle后会添加active类
     assert.expect(2)
     var $btn = $('<button class="btn" data-toggle="button">mdo</button>')
     assert.ok(!$btn.hasClass('active'), 'btn does not have active class')

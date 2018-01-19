@@ -100,6 +100,10 @@ const Util = (($) => {
     },
 
     getSelectorFromElement(element) {
+      /**
+       * 从元素中获取选择符
+       * 取自data-target属性
+       */
       let selector = element.getAttribute('data-target')
       if (!selector || selector === '#') {
         selector = element.getAttribute('href') || ''
