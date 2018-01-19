@@ -45,6 +45,7 @@ $(function () {
   })
 
   QUnit.test('should toggle active when btn children are clicked', function (assert) {
+    //
     assert.expect(2)
     var $btn = $('<button class="btn" data-toggle="button">mdo</button>')
     var $inner = $('<i/>')

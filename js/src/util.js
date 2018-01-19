@@ -102,7 +102,8 @@ const Util = (($) => {
     getSelectorFromElement(element) {
       /**
        * 从元素中获取选择符
-       * 取自data-target属性
+       * 取自data-target属性，否则去href
+       * 
        */
       let selector = element.getAttribute('data-target')
       if (!selector || selector === '#') {
