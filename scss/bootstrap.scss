@@ -5,38 +5,44 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-@import "functions";
-@import "variables";
-@import "mixins";
-@import "root";
-@import "reboot";
-@import "type";
-@import "images";
-@import "code";
-@import "grid";
-@import "tables";
-@import "forms";
-@import "buttons";
-@import "transitions";
-@import "dropdown";
-@import "button-group";
-@import "input-group";
-@import "custom-forms";
-@import "nav";
-@import "navbar";
-@import "card";
-@import "breadcrumb";
-@import "pagination";
-@import "badge";
-@import "jumbotron";
-@import "alert";
-@import "progress";
-@import "media";
-@import "list-group";
-@import "close";
-@import "modal";
-@import "tooltip";
-@import "popover";
-@import "carousel";
-@import "utilities";
-@import "print";
+@import "functions";//函数
+@import "variables";//变量
+@import "mixins";//混合
+@import "root";//
+@import "reboot";//重置浏览器默认样式
+@import "type";//
+@import "images";//图片
+@import "code";//代码
+@import "grid";//网格布局
+@import "tables";//表格
+@import "forms";//表单
+@import "buttons";//按钮
+@import "transitions";//
+@import "dropdown";//下拉
+@import "button-group";//按钮组
+@import "input-group";//
+@import "custom-forms";//自定义表单
+@import "nav";//导航
+@import "navbar";//导航条
+@import "card";//卡片
+@import "breadcrumb";//面包屑
+@import "pagination";//分页
+@import "badge";//
+@import "jumbotron";//
+@import "alert";//
+@import "progress";//进度条
+@import "media";//媒体
+@import "list-group";//列表组
+@import "close";//关闭
+@import "modal";//弹框
+@import "tooltip";//提示
+@import "popover";//
+@import "carousel";//旋转木马
+@import "utilities";//工具
+@import "print";//打印样式
+
+/*
+在Sass中以下划线开头的文件认为是partial的，不过在import的时候可以不写下划线。
+这是Bootstrap的入口文件，这里面没有内容，都是引入的别的文件。Bootstrap是模块化的开发，便于维护！ 
+
+*/

@@ -9,6 +9,9 @@
 //
 
 // stylelint-disable
+/*
+白到黑，中间夹着9级灰
+*/
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -167,7 +170,9 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px
 ) !default;
-
+/*
+确保断点map的值是从零开始的且是升序的
+*/
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints);
 
@@ -210,7 +215,7 @@ $border-radius-sm:            .2rem !default;
 $component-active-color:      $white !default;
 $component-active-bg:         theme-color("primary") !default;
 
-$caret-width:                 .3em !default;
+$caret-width:                 .3em !default;//这里用的是em，根据文本的大小调整大小
 
 $transition-base:             all .2s ease-in-out !default;
 $transition-fade:             opacity .15s linear !default;
@@ -238,6 +243,9 @@ $font-weight-bold:            700 !default;
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 
+/*
+h1-h6: 2.5, 2, 1.75, 1.5, 1.25, 1
+*/
 $h1-font-size:                $font-size-base * 2.5 !default;
 $h2-font-size:                $font-size-base * 2 !default;
 $h3-font-size:                $font-size-base * 1.75 !default;

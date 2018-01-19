@@ -3,40 +3,40 @@
 // Used in conjunction with global variables to enable certain theme features.
 
 // Utilities
-@import "mixins/breakpoints";
-@import "mixins/hover";
-@import "mixins/image";
-@import "mixins/badge";
-@import "mixins/resize";
-@import "mixins/screen-reader";
-@import "mixins/size";
-@import "mixins/reset-text";
-@import "mixins/text-emphasis";
-@import "mixins/text-hide";
-@import "mixins/text-truncate";
-@import "mixins/visibility";
+@import "mixins/breakpoints";//断点相关
+@import "mixins/hover";//鼠标悬停
+@import "mixins/image";//图片
+@import "mixins/badge";//
+@import "mixins/resize";//
+@import "mixins/screen-reader";//屏幕阅读器
+@import "mixins/size";//大小
+@import "mixins/reset-text";//重置文字
+@import "mixins/text-emphasis";//文字强调
+@import "mixins/text-hide";//文字隐藏
+@import "mixins/text-truncate";//文字截断
+@import "mixins/visibility";//可见性
 
 // // Components
-@import "mixins/alert";
-@import "mixins/buttons";
-@import "mixins/caret";
-@import "mixins/pagination";
-@import "mixins/lists";
-@import "mixins/list-group";
-@import "mixins/nav-divider";
-@import "mixins/forms";
-@import "mixins/table-row";
+@import "mixins/alert";//
+@import "mixins/buttons";//按钮
+@import "mixins/caret";//
+@import "mixins/pagination";//分页
+@import "mixins/lists";//列表
+@import "mixins/list-group";//列表组
+@import "mixins/nav-divider";//导航分割
+@import "mixins/forms";//表单
+@import "mixins/table-row";//表行
 
 // // Skins
-@import "mixins/background-variant";
-@import "mixins/border-radius";
-@import "mixins/box-shadow";
-@import "mixins/gradients";
-@import "mixins/transition";
+@import "mixins/background-variant";//背景
+@import "mixins/border-radius";//边框圆角
+@import "mixins/box-shadow";//盒子阴影
+@import "mixins/gradients";//渐变
+@import "mixins/transition";//变换
 
 // // Layout
-@import "mixins/clearfix";
+@import "mixins/clearfix";//清浮动
 // @import "mixins/navbar-align";
-@import "mixins/grid-framework";
-@import "mixins/grid";
-@import "mixins/float";
+@import "mixins/grid-framework";//网格框架
+@import "mixins/grid";//网格
+@import "mixins/float";//浮动

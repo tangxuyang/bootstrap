@@ -4,6 +4,10 @@
 
 // Ascending
 // Used to evaluate Sass maps like our grid breakpoints.
+/*
+断言：确保map中的元素值是从小到大顺序的
+用于响应式的断点map
+*/
 @mixin _assert-ascending($map, $map-name) {
   $prev-key: null;
   $prev-num: null;
@@ -11,8 +15,9 @@
     @if $prev-num == null {
       // Do nothing
     } @else if not comparable($prev-num, $num) {
+      // comparable函数是用来判断两个值是否可以比较的，如果两个值得单位都不一样就不可比较是没有意义的
       @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
-    } @else if $prev-num >= $num {
+    } @else if $prev-num >= $num {//判断前面的值是否大于后面的值，如果大于就不是正序，给出警告
       @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
     }
     $prev-key: $key;
@@ -22,6 +27,11 @@
 
 // Starts at zero
 // Another grid mixin that ensures the min-width of the lowest breakpoint starts at 0.
+/*
+断言：保证map的第一个元素值是0
+
+list的下标是从1开始的，这个跟一般的编程语言不同
+*/
 @mixin _assert-starts-at-zero($map) {
   $values: map-values($map);
   $first-value: nth($values, 1);
@@ -38,6 +48,9 @@
 // @param {String} $search - Substring to replace
 // @param {String} $replace ('') - New value
 // @return {String} - Updated string
+/*
+递归方式去替换字符串
+*/
 @function str-replace($string, $search, $replace: "") {
   $index: str-index($string, $search);
 
@@ -49,6 +62,10 @@
 }
 
 // Color contrast
+/*
+颜色的灰度化
+公式： red*0.299 + green*0.587 + blue*0.114
+*/
 @function color-yiq($color) {
   $r: red($color);
   $g: green($color);
@@ -64,19 +81,29 @@
 }
 
 // Retrieve color Sass maps
+/*
+从_variables中定义的$colors中取出指定名称的颜色值
+*/
 @function color($key: "blue") {
   @return map-get($colors, $key);
 }
-
+/*
+从_variables中定义的$theme-colors中取出指定名称的颜色值
+*/
 @function theme-color($key: "primary") {
   @return map-get($theme-colors, $key);
 }
-
+/*
+从_variables中定义的$grays中取出指定名字的颜色值
+*/
 @function gray($key: "100") {
   @return map-get($grays, $key);
 }
 
 // Request a theme color level
+/*
+
+*/
 @function theme-color-level($color-name: "primary", $level: 0) {
   $color: theme-color($color-name);
   $color-base: if($level > 0, #000, #fff);
