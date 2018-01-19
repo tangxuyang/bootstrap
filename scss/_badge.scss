@@ -2,7 +2,13 @@
 //
 // Requires one of the contextual, color modifier classes for `color` and
 // `background-color`.
-
+/*
+  徽章class
+  如果内容为空时不显示
+  :empty{
+    display:none;
+  }
+  */
 .badge {
   display: inline-block;
   padding: $badge-padding-y $badge-padding-x;

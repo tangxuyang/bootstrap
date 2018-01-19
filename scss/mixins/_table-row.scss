@@ -1,5 +1,8 @@
 // Tables
-
+/*
+生成表格行的混合
+这里生成的是用于tr上的class
+*/
 @mixin table-row-variant($state, $background) {
   // Exact selectors below required to override `.table-striped` and prevent
   // inheritance to nested tables.

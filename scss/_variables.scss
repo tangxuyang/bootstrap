@@ -9,6 +9,9 @@
 //
 
 // stylelint-disable
+/*
+白到黑，中间有9个灰色
+*/
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -61,7 +64,7 @@ $colors: map-merge((
   "gray":       $gray-600,
   "gray-dark":  $gray-800
 ), $colors);
-
+//主题色
 $primary:       $blue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
@@ -167,7 +170,9 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px
 ) !default;
-
+/*
+调用断言保证断点map中的值是升序的，同时第一个值是0
+*/
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints);
 
@@ -182,7 +187,9 @@ $container-max-widths: (
   lg: 960px,
   xl: 1140px
 ) !default;
-
+/*
+保证升序
+*/
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
 
@@ -210,6 +217,9 @@ $border-radius-sm:            .2rem !default;
 $component-active-color:      $white !default;
 $component-active-bg:         theme-color("primary") !default;
 
+/*
+使用em是为了保证箭头能跟着文本调整大小
+*/
 $caret-width:                 .3em !default;
 
 $transition-base:             all .2s ease-in-out !default;

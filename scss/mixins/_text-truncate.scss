@@ -1,6 +1,8 @@
 // Text truncate
 // Requires inline-block or block for proper styling
-
+/*
+文字截取，出现省略号
+*/
 @mixin text-truncate() {
   overflow: hidden;
   text-overflow: ellipsis;

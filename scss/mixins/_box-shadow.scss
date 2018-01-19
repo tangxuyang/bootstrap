@@ -1,3 +1,7 @@
+/*
+盒阴影
+这里使用了可变参数传值
+*/
 @mixin box-shadow($shadow...) {
   @if $enable-shadows {
     box-shadow: $shadow;

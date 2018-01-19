@@ -1,3 +1,8 @@
+<!--
+我的目的是学习Bootstrap的编码思想和它中的好的实践，手段是通过思考每一段代码，给出自己的理解注释！  
+
+ -->
+
 <p align="center">
   <a href="https://getbootstrap.com/">
     <img src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width=72 height=72>

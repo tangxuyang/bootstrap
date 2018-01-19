@@ -2,21 +2,37 @@
 //
 // Used only by Bootstrap to generate the correct number of grid classes given
 // any value of `$grid-columns`.
-
+/*
+生成网格列
+参数：
+  列数
+  间距
+  断点map
+*/
 @mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
   // Common properties for all breakpoints
+  /*
+  占位，被extend
+  */
   %grid-column {
     position: relative;
     width: 100%;
     min-height: 1px; // Prevent columns from collapsing when empty
-    padding-right: ($gutter / 2);
+    padding-right: ($gutter / 2);//左右padding一样，都是15px
     padding-left: ($gutter / 2);
   }
 
+  //遍历断点map，为每个断点生成一套网格样式
   @each $breakpoint in map-keys($breakpoints) {
     $infix: breakpoint-infix($breakpoint, $breakpoints);
 
     // Allow columns to stretch full width below their breakpoints
+    /*
+      col-sm-1~col-sm-12
+      对于xs断点，class是col-1~col-12
+
+      设置列class的基本样式
+    */
     @for $i from 1 through $columns {
       .col#{$infix}-#{$i} {
         @extend %grid-column;

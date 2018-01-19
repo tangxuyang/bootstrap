@@ -1,5 +1,8 @@
 // Gradients
-
+/*
+渐变背景
+根据传入的颜色设置渐变的背景色，线性的
+*/
 @mixin gradient-bg($color) {
   @if $enable-gradients {
     background: $color linear-gradient(180deg, mix($body-bg, $color, 15%), $color) repeat-x;

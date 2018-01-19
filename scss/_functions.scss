@@ -4,6 +4,9 @@
 
 // Ascending
 // Used to evaluate Sass maps like our grid breakpoints.
+/*
+断言，用于保证map中的值是升序的
+*/
 @mixin _assert-ascending($map, $map-name) {
   $prev-key: null;
   $prev-num: null;
@@ -22,6 +25,9 @@
 
 // Starts at zero
 // Another grid mixin that ensures the min-width of the lowest breakpoint starts at 0.
+/*
+断言，保证断点map中第一个元素值是0
+*/
 @mixin _assert-starts-at-zero($map) {
   $values: map-values($map);
   $first-value: nth($values, 1);
@@ -38,6 +44,9 @@
 // @param {String} $search - Substring to replace
 // @param {String} $replace ('') - New value
 // @return {String} - Updated string
+/*
+字符串替换，递归
+*/
 @function str-replace($string, $search, $replace: "") {
   $index: str-index($string, $search);
 
@@ -49,6 +58,9 @@
 }
 
 // Color contrast
+/*
+灰度化
+*/
 @function color-yiq($color) {
   $r: red($color);
   $g: green($color);
@@ -64,19 +76,29 @@
 }
 
 // Retrieve color Sass maps
+/*
+从$colors map中取出指定名字的颜色值
+*/
 @function color($key: "blue") {
   @return map-get($colors, $key);
 }
-
+/*
+从$theme-colors中取出指定名字的颜色值
+*/
 @function theme-color($key: "primary") {
   @return map-get($theme-colors, $key);
 }
-
+/*
+从$grays中取出指定名字的颜色值
+*/
 @function gray($key: "100") {
   @return map-get($grays, $key);
 }
 
 // Request a theme color level
+/*
+把$theme-colors中指定的颜色加深或变浅
+*/
 @function theme-color-level($color-name: "primary", $level: 0) {
   $color: theme-color($color-name);
   $color-base: if($level > 0, #000, #fff);

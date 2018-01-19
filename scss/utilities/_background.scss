@@ -1,5 +1,8 @@
 // stylelint-disable declaration-no-important
-
+/*
+设置背景色的class
+按照主题色设置的
+*/
 @each $color, $value in $theme-colors {
   @include bg-variant(".bg-#{$color}", $value);
 }
