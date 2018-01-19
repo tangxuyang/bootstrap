@@ -1,7 +1,10 @@
 // stylelint-disable declaration-no-important
 
 // Typography
-
+/*
+强调文本
+就是指定文本的颜色，如果是a标签还会设置它的hover和focus样式
+*/
 @mixin text-emphasis-variant($parent, $color) {
   #{$parent} {
     color: $color !important;

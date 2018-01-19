@@ -1,3 +1,9 @@
+/*
+定义css变量,这是语法
+:root {
+
+}
+*/
 :root {
   // Custom variable values only support SassScript inside `#{}`.
   @each $color, $value in $colors {

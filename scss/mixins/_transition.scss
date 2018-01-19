@@ -1,3 +1,7 @@
+/*
+过度效果
+length函数可以获取可变参数的个数
+*/
 @mixin transition($transition...) {
   @if $enable-transitions {
     @if length($transition) == 0 {

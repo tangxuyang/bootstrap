@@ -10,7 +10,9 @@
 // always return their regular psuedo-classes instead of a shimmed media query.
 //
 // Issue: https://github.com/twbs/bootstrap/issues/25195
-
+/*
+感觉没啥好说的
+*/
 @mixin hover {
   &:hover { @content; }
 }

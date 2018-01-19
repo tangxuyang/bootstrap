@@ -102,7 +102,7 @@ list的下标是从1开始的，这个跟一般的编程语言不同
 
 // Request a theme color level
 /*
-
+把$theme-colors中指定的颜色加深或变浅
 */
 @function theme-color-level($color-name: "primary", $level: 0) {
   $color: theme-color($color-name);

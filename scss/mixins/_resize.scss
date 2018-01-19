@@ -1,5 +1,7 @@
 // Resize anything
-
+/*
+是元素可以改变大小，通过拖拽它的边缘，这个属性只在overflow不是visible的情况下才起作用，因此设置为了auto
+*/
 @mixin resizable($direction) {
   overflow: auto; // Per CSS3 UI, `resize` only applies when `overflow` isn't `visible`
   resize: $direction; // Options: horizontal, vertical, both

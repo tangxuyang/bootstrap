@@ -1,7 +1,10 @@
 // stylelint-disable declaration-no-important
 
 // Contextual backgrounds
-
+/*
+背景色
+考虑了a和button的情况，指定了它们的hover和focus样式
+*/
 @mixin bg-variant($parent, $color) {
   #{$parent} {
     background-color: $color !important;
@@ -13,7 +16,9 @@
     }
   }
 }
-
+/*
+渐变背景
+*/
 @mixin bg-gradient-variant($parent, $color) {
   #{$parent} {
     background: $color linear-gradient(180deg, mix($body-bg, $color, 15%), $color) repeat-x !important;

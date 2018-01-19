@@ -17,14 +17,14 @@
 
   thead th {
     vertical-align: bottom;
-    border-bottom: (2 * $table-border-width) solid $table-border-color;
+    border-bottom: (2 * $table-border-width) solid $table-border-color;//表头的下边框2被粗
   }
 
-  tbody + tbody {
+  tbody + tbody {//如果存在多个tbody，设置后者的上边框
     border-top: (2 * $table-border-width) solid $table-border-color;
   }
 
-  .table {
+  .table {//嵌套表格的背景色是白色
     background-color: $body-bg;
   }
 }
@@ -34,7 +34,7 @@
 // Condensed table w/ half padding
 //
 
-.table-sm {
+.table-sm {//调小单元格的padding
   th,
   td {
     padding: $table-cell-padding-sm;
@@ -45,7 +45,9 @@
 // Bordered version
 //
 // Add borders all around the table and between all the columns.
-
+/*
+有边框的表格
+*/
 .table-bordered {
   border: $table-border-width solid $table-border-color;
 
@@ -66,7 +68,11 @@
 // Zebra-striping
 //
 // Default zebra-stripe styles (alternating gray and transparent backgrounds)
+/*
+斑马线
 
+:nth-type-of是CSS3的属性
+*/
 .table-striped {
   tbody tr:nth-of-type(odd) {
     background-color: $table-accent-bg;
@@ -77,7 +83,10 @@
 // Hover effect
 //
 // Placed here since it has to come after the potential zebra striping
-
+/*
+悬浮效果
+悬浮行的背景色变化
+*/
 .table-hover {
   tbody tr {
     @include hover {
@@ -91,7 +100,9 @@
 //
 // Exact selectors below required to override `.table-striped` and prevent
 // inheritance to nested tables.
-
+/*
+  根据主题颜色生成对应的背景色的表格行class
+*/
 @each $color, $value in $theme-colors {
   @include table-row-variant($color, theme-color-level($color, -9));
 }

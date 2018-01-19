@@ -5,12 +5,21 @@
 // and abandoned it in Bootstrap v3 because it breaks lots of third-party widgets (including Google Maps)
 // which weren't expecting the images within themselves to be involuntarily resized.
 // See also https://github.com/twbs/bootstrap/issues/18178
+/*
+响应式图片，确保图片不会超出它的父容器
+就是设置了图片的max-width: 100%
+同时为了让高度随着宽度保持纵横比，设置了height: auto
+*/
 .img-fluid {
   @include img-fluid;
 }
 
 
 // Image thumbnails
+/*
+缩略图
+设置了padding，背景色，边框，圆角，盒阴影，同时也是响应式的
+*/
 .img-thumbnail {
   padding: $thumbnail-padding;
   background-color: $thumbnail-bg;

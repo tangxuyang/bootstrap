@@ -1,5 +1,7 @@
 // Sizing shortcuts
-
+/*
+设置元素的width和height
+*/
 @mixin size($width, $height: $width) {
   width: $width;
   height: $height;

@@ -1,3 +1,10 @@
+/*
+为什么是font: 0/0 a;
+其实font: 0/0是为了设置字体的大小和行高为0，这样其实浏览器是可识别的，但是css validation不能识别它认为这样不合法，为了通过验证，就加了一个a作为font-family  
+
+这个是为了实现图片替换的。
+我们为了让标题跟设计稿中的字体一样，就用图片替代文本，但是同时又不想破坏屏幕阅读器和SEO，因此就把文字隐藏。
+*/
 // CSS image replacement
 @mixin text-hide() {
   // stylelint-disable-next-line font-family-no-missing-generic-family-keyword

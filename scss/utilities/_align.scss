@@ -1,5 +1,14 @@
 // stylelint-disable declaration-no-important
-
+/*
+文本对齐
+vertical-align:
+- top
+- middle
+- bottom
+- text-top
+- baseline
+- text-bottom
+*/
 .align-baseline    { vertical-align: baseline !important; } // Browser default
 .align-top         { vertical-align: top !important; }
 .align-middle      { vertical-align: middle !important; }

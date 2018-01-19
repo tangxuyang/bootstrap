@@ -1,3 +1,10 @@
+/*
+生成徽章样式的混合
+指定背景色，根据背景色生成一个具有反差的颜色作为前景色
+考虑了元素是锚点（a）的情况，hover和focus去除文本装饰，背景色比现在深10%
+
+Bootstrap中很多都考虑了a的情况，这一点值得学习！
+*/
 @mixin badge-variant($bg) {
   color: color-yiq($bg);
   background-color: $bg;

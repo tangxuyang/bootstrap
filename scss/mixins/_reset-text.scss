@@ -1,3 +1,6 @@
+/*
+重新设置文本样式，使用默认的值
+*/
 @mixin reset-text {
   font-family: $font-family-base;
   // We deliberately do NOT reset font-size or word-wrap.

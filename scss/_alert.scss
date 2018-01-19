@@ -49,3 +49,14 @@
     @include alert-variant(theme-color-level($color, $alert-bg-level), theme-color-level($color, $alert-border-level), theme-color-level($color, $alert-color-level));
   }
 }
+
+/*
+提示
+<div class="alert alert-danger">
+  <button type="button" class="close" data-dismiss="alert"><span?&times;</span></button>
+  <h4 class="alert-heading">标题</h4>
+  <p>xxx</p>
+  <h4/>
+  <p>xxx</p>
+</div>
+*/

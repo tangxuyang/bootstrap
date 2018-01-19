@@ -3,6 +3,9 @@
 //
 // Border
 //
+/*
+设置边框，边框颜色，圆角
+*/
 
 .border         { border: $border-width solid $border-color !important; }
 .border-top     { border-top: $border-width solid $border-color !important; }
